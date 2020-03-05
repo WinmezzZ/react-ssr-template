@@ -1,0 +1,57 @@
+{
+  "name": "react-ssr-template",
+  "version": "1.0.0",
+  "description": "react server side render template",
+  "main": "index.js",
+  "scripts": {
+    "build:client": "rimraf build/client & webpack --mode=development -w --config webpack.config.client.js",
+    "build:server": "rimraf build/server & webpack --mode=development -w --config webpack.config.server.js",
+    "build": "npm run build:client & npm run build:server",
+    "start": "nodemon --watch build/server/server.js build/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WinmezzZ/react-ssr-template.git"
+  },
+  "keywords": [
+    "React",
+    "SSR"
+  ],
+  "author": "Winme",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WinmezzZ/react-ssr-template/issues"
+  },
+  "homepage": "https://github.com/WinmezzZ/react-ssr-template#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-react": "^7.8.3",
+    "@loadable/babel-plugin": "^5.12.0",
+    "@loadable/webpack-plugin": "^5.12.0",
+    "babel-loader": "^8.0.6",
+    "cors": "^2.8.5",
+    "css-loader": "^3.4.2",
+    "express": "^4.17.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "rimraf": "^3.0.2",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "@loadable/component": "^5.12.0",
+    "@loadable/server": "^5.12.0",
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-redux": "^7.2.0",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
+  }
+}
