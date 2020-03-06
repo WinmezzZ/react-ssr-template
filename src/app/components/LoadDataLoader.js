@@ -20,7 +20,6 @@ const ASyncLoadNavDataLoader = ({ store, children }) => {
 
 export default ASyncLoadNavDataLoader
 
-
 // /** 同步等待数据渲染新路由 */
 // const SyncNavDataLoader = ({ store, children }) => {
 //   const location = useLocation()

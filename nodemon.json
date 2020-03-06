@@ -1,0 +1,6 @@
+{
+  "ignore": ["build", "node_modules"],
+  "execMap": {
+    "js": "babel-node"
+  }
+}

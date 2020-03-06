@@ -13,7 +13,6 @@
 $ git clone https://github.com/WinmezzZ/react-ssr-template
 $ cd react-ssr-template
 $ npm install
-$ npm build
 $ npm start
 ```
 
@@ -21,4 +20,4 @@ $ npm start
 
 右键网页查看网页源码，body内不是只有一个`<div id="root">`标签，并且页面和数据能对应上网页，即服务端渲染成功。
 
-ps：若要使用ts，可以结合我另一个[webpack-typescript-app](https://github.com/WinmezzZ/webpack-typescript-app)进行参考
+ps：若要使用ts，可以结合我另一个项目[webpack-typescript-app](https://github.com/WinmezzZ/webpack-typescript-app)进行参考
