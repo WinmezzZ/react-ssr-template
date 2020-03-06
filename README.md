@@ -19,6 +19,6 @@ $ npm start
 
 #### 如何查看是否为服务端渲染？
 
-右键网页查看网页源码，body内不是只有一个<div id="root">标签，并且页面和数据能对应上网页，即服务端渲染成功。
+右键网页查看网页源码，body内不是只有一个`<div id="root">`标签，并且页面和数据能对应上网页，即服务端渲染成功。
 
 ps：若要使用ts，可以结合我另一个[webpack-typescript-app](https://github.com/WinmezzZ/webpack-typescript-app)进行参考
