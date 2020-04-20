@@ -5,7 +5,7 @@ import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import { ChunkExtractor } from '@loadable/server'
+import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server'
 import App from '../app'
 import { configureStore } from '../app/store'
 import { loadBranchData } from '../app/route'
@@ -43,13 +43,15 @@ app.get('*', async(req, res) => {
 
   const extractor = new ChunkExtractor({ statsFile })
 
-  const jsx = extractor.collectChunks(
+  const jsx = (
+    <ChunkExtractorManager extractor={extractor}>
       <Provider store={store}>
         <StaticRouter location={req.url} context={context}>
             <App />
         </StaticRouter>
       </Provider>
-    )
+    </ChunkExtractorManager>
+  )
 
   const template = renderToString(jsx)
 
